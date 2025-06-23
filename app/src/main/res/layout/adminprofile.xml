@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/container_profile"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/container_button"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Back arrow and Profile title -->
+            <RelativeLayout
+                android:id="@+id/container_group1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/image_arrow_left"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/back_arrow" />
+
+                <TextView
+                    android:id="@+id/text_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Admin Profile"
+                    android:textColor="#FF181D27"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <!-- Profile icon (default admin icon) -->
+            <ImageView
+                android:id="@+id/admin_profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/container_group1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/adminicon"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true" />
+
+            <!-- Email display -->
+            <TextView
+                android:id="@+id/text_admin_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/admin_profile_image"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="admin@gmail.com"
+                android:textColor="#FF181D27"
+                android:textSize="18sp" />
+
+            <!-- Form fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_admin_email"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <!-- Current Password -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Password"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/current_password_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/drawable_shape_5">
+
+                    <EditText
+                        android:id="@+id/text_current_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:hint="Enter current password"
+                        android:inputType="textPassword"
+                        android:textColor="#FF181D27"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- New Password -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Password"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/new_password_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/drawable_shape_5">
+
+                    <EditText
+                        android:id="@+id/text_new_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:hint="Enter new password"
+                        android:inputType="textPassword"
+                        android:textColor="#FF181D27"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- Confirm New Password -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm New Password"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/confirm_password_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/drawable_shape_5">
+
+                    <EditText
+                        android:id="@+id/text_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:hint="Confirm new password"
+                        android:inputType="textPassword"
+                        android:textColor="#FF181D27"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Update Password button -->
+    <Button
+        android:id="@+id/container_button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:text="Update Password"
+        android:textColor="#FFFFFFFF"
+        android:background="@drawable/img_rectangle" />
+</RelativeLayout>

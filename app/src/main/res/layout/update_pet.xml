@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/container_addpet">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back arrow and title -->
+        <RelativeLayout
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/image_arrow_left"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back_arrow"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/text_add_pet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pet Details"
+                android:textSize="18sp"
+                android:textColor="#FF181D27"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <!-- Pet image and edit button - Centered -->
+        <FrameLayout
+            android:id="@+id/image_container"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/header_container"
+            android:layout_marginTop="32dp">
+
+            <ImageView
+                android:id="@+id/pet_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/peticon"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle"
+                android:clipToOutline="true"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/image_pencil_simple"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/edit_icon"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"/>
+        </FrameLayout>
+
+        <!-- Form container - Centered -->
+        <LinearLayout
+            android:id="@+id/form_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_container"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:paddingHorizontal="24dp">
+
+            <!-- Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#FF181D27"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <RelativeLayout
+                android:id="@+id/name_container"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/drawable_shape_5">
+
+                <EditText
+                    android:id="@+id/text_pet_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your pet name"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"/>
+            </RelativeLayout>
+
+            <!-- Type -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:textColor="#FF181D27"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <RelativeLayout
+                android:id="@+id/type_container"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/drawable_shape_5">
+
+                <TextView
+                    android:id="@+id/text_pet_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <Spinner
+                    android:id="@+id/type_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <!-- Breed -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breed"
+                android:textColor="#FF181D27"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <RelativeLayout
+                android:id="@+id/breed_container"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/drawable_shape_5">
+
+                <TextView
+                    android:id="@+id/text_pet_breed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <Spinner
+                    android:id="@+id/breed_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <!-- Size -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size"
+                android:textColor="#FF181D27"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <RelativeLayout
+                android:id="@+id/size_container"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/drawable_shape_5">
+
+                <TextView
+                    android:id="@+id/text_pet_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <Spinner
+                    android:id="@+id/size_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <!-- Gender -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textColor="#FF181D27"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <RelativeLayout
+                android:id="@+id/gender_container"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/drawable_shape_5">
+
+                <TextView
+                    android:id="@+id/text_pet_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <Spinner
+                    android:id="@+id/gender_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <!-- Birth Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birth Date"
+                android:textColor="#FF181D27"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <RelativeLayout
+                android:id="@+id/birthdate_container"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/drawable_shape_5">
+
+                <EditText
+                    android:id="@+id/text_pet_born"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="When was your pet born?"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"/>
+
+                <ImageView
+                    android:id="@+id/image_calendar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/calender"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"/>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <!-- Add pet button - Centered below form -->
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_below="@id/form_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:minWidth="192dp"
+            android:background="@drawable/img_rectangle"
+            android:text="Update pet"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp"
+            android:paddingHorizontal="32dp"/>
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_below="@id/form_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:minWidth="192dp"
+            android:background="@drawable/img_red"
+            android:text="Delete pet"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp"
+            android:paddingHorizontal="32dp"/>
+    </RelativeLayout>
+</ScrollView>

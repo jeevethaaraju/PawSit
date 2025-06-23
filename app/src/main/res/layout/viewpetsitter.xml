@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_shape">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <!-- Background Images -->
+            <ImageView
+                android:layout_width="445dp"
+                android:layout_height="406dp"
+                android:layout_marginLeft="-57dp"
+                android:layout_marginTop="-210dp"
+                android:layout_gravity="top|left"
+                android:background="@drawable/drawable_shape_1"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:layout_width="342dp"
+                android:layout_height="342dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="-178dp"
+                android:layout_gravity="top|right"
+                android:background="@drawable/drawable_shape_2"
+                android:scaleType="centerInside" />
+
+            <!-- Profile Icon -->
+            <ImageView
+                android:id="@+id/profileicon"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="313dp"
+                android:layout_marginTop="46dp"
+                android:layout_gravity="top|right"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
+                android:background="@drawable/circle"
+                android:src="@drawable/icon" />
+
+            <!-- App Title -->
+            <TextView
+                android:layout_width="106dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="6.76dp"
+                android:layout_marginTop="45dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="PawSit"
+                android:textColor="#FFEA4A6A"
+                android:textSize="32dp" />
+
+            <ImageView
+                android:layout_width="47.13dp"
+                android:layout_height="43.7dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="34.72dp"
+                android:layout_gravity="top|left"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo" />
+
+            <!-- Pet Owner/Sitter Text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="180dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Pet Owner"
+                    android:textColor="#FF141415"
+                    android:textSize="19.7dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Pet Sitter"
+                    android:textColor="#FF141415"
+                    android:textSize="19.7dp" />
+            </LinearLayout>
+
+            <!-- Table Container -->
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="209dp"
+                android:background="@drawable/line"
+                android:scaleType="centerInside" />
+
+            <LinearLayout
+                android:id="@+id/table_body"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="232dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- Table Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Name"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Email"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Phone"
+                        android:textColor="#000"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <!-- Table Content -->
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Sample Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/row_name"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="John Smith"
+                                android:textColor="#FF3B5571"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/row_email"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.5"
+                                android:gravity="center"
+                                android:text="john@example.com"
+                                android:textColor="#FF3B5571"
+                                android:textSize="14dp" />
+
+                            <TextView  android:id="@+id/row_phone"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="123456789"
+                                android:textColor="#FF3B5571"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/drawable_shape_4"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/container_frame14"
+            android:layout_width="22dp"
+            android:layout_height="36.61dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/pawlogo" />
+
+        <ImageView
+            android:id="@+id/container_frame4"
+            android:layout_width="22dp"
+            android:layout_height="36.61dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/person" />
+
+        <ImageView
+            android:id="@+id/image_frame17"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="26dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/message" />
+
+        <ImageView
+            android:id="@+id/profilehome"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="26dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/profiler" />
+    </LinearLayout>
+</FrameLayout>

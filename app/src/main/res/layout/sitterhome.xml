@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_sitterhome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_shape">
+
+    <!-- Background Ellipses -->
+    <ImageView
+        android:id="@+id/image_ellipse1"
+        android:layout_width="445dp"
+        android:layout_height="406dp"
+        android:layout_marginLeft="-37dp"
+        android:layout_marginTop="-210dp"
+        android:layout_gravity="top|left"
+        android:background="@drawable/drawable_shape_1"
+        android:scaleType="centerInside" />
+
+    <ImageView
+        android:id="@+id/image_ellipse2"
+        android:layout_width="342dp"
+        android:layout_height="342dp"
+        android:layout_marginLeft="207dp"
+        android:layout_marginTop="-178dp"
+        android:layout_gravity="top|left"
+        android:background="@drawable/drawable_shape_2"
+        android:scaleType="centerInside" />
+
+    <!-- Profile Icon -->
+    <ImageView
+        android:id="@+id/profileicon"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="top|left"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_background"
+        android:src="@drawable/icon"
+        android:clipToOutline="true" />
+
+    <!-- Bottom Navigation Include -->
+    <include
+        android:id="@+id/bottomSitterNav"
+        layout="@layout/bottom_sitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+    <!-- Top Bar with Logo & Notifications -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:lottie_rawRes="@raw/pawanime"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:padding="8dp"
+            android:shadowColor="#66000000"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:layout_marginRight="0dp"
+            android:shadowRadius="2"
+            android:text="PawSit"
+            android:textColor="#8B4513"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="22dp"
+                android:layout_height="36.61dp"
+                android:layout_marginRight="60dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/noty" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Welcome Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginRight="24dp"
+        android:layout_gravity="top|left"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:text="TESTING"
+                android:textColor="#FF141415"
+                android:textSize="16sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_hi"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:lottie_rawRes="@raw/hi"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:text="Welcome Back,"
+                android:textColor="#FF141415"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="#E0E0E0"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="248dp"
+        android:layout_gravity="top|left"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:text="Dashboard"
+        android:textStyle="bold"
+        android:textColor="#FF141415"
+        android:textSize="18dp" />
+
+    <!-- First Row of Booking Summary Cards -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginHorizontal="16dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Total Bookings -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="104dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bgpet3" />
+
+                    <TextView
+                        android:id="@+id/text_total_bookings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Total Bookings"
+                        android:textColor="#FF141415"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_total_bookings_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="25dp"
+                        android:text="21"
+                        android:textColor="#FFFF9500"
+                        android:textSize="36sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Completed -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bgpet3" />
+
+                    <TextView
+                        android:id="@+id/text_completed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Completed"
+                        android:textColor="#FF141415"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_completed_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="25dp"
+                        android:text="19"
+                        android:textColor="#FFFF9500"
+                        android:textSize="36sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Second Row: Pending & Approved -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginHorizontal="16dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Pending -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="104dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bgpet3" />
+
+                    <TextView
+                        android:id="@+id/text_pending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Pending"
+                        android:textColor="#FF141415"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_pending_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="25dp"
+                        android:text="5"
+                        android:textColor="#FFFF9500"
+                        android:textSize="36sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Approved -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bgpet3" />
+
+                    <TextView
+                        android:id="@+id/text_approved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Approved"
+                        android:textColor="#FF141415"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_approved_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="25dp"
+                        android:text="7"
+                        android:textColor="#FFFF9500"
+                        android:textSize="36sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Upcoming Booking Reminder -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Bookings"
+            android:textColor="#FF141415"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/upcoming_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/upcoming_bookings_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingEnd="16dp">
+
+                <!-- No bookings message -->
+                <TextView
+                    android:id="@+id/no_booking_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="108dp"
+                    android:gravity="center"
+                    android:text="No bookings in next 3 days"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</FrameLayout>

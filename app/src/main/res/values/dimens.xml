@@ -1,0 +1,188 @@
+<resources>
+    <!-- Screen padding -->
+    <dimen name="horizontal_padding">16dp</dimen>
+
+    <!-- Background image dimensions -->
+    <dimen name="bg_image_large">300dp</dimen>
+    <dimen name="bg_image_medium">250dp</dimen>
+    <dimen name="bg_margin_left">-37dp</dimen>
+    <dimen name="bg_margin_right">207dp</dimen>
+    <dimen name="bg_margin_top">-210dp</dimen>
+    <dimen name="bg_margin_top_small">-178dp</dimen>
+
+    <!-- Profile icon -->
+    <dimen name="profile_icon_size">46dp</dimen>
+    <dimen name="profile_margin_left">343dp</dimen>
+    <dimen name="profile_margin_top">46dp</dimen>
+
+    <!-- Bottom navigation -->
+    <dimen name="bottom_nav_width">350dp</dimen>
+    <dimen name="bottom_nav_margin_left">30dp</dimen>
+    <dimen name="bottom_nav_margin_top">817dp</dimen>
+
+    <!-- Text positioning -->
+    <dimen name="title_margin_left">6.76dp</dimen>
+    <dimen name="logo_margin_left">125.17dp</dimen>
+    <dimen name="sitter_margin_left">251dp</dimen>
+    <dimen name="owner_margin_left">57dp</dimen>
+    <dimen name="line_margin_left">54dp</dimen>
+
+    <!-- Table positioning -->
+    <dimen name="table_margin_left">20dp</dimen>
+    <dimen name="table_margin_right">20dp</dimen>
+
+    <!-- Indicator positioning -->
+    <dimen name="indicator_margin_left">148dp</dimen>
+
+
+        <!-- Ellipse 1 dimensions -->
+        <dimen name="ellipse1_width">445dp</dimen>
+        <dimen name="ellipse1_height">406dp</dimen>
+        <dimen name="ellipse1_margin_left">-37dp</dimen>
+        <dimen name="ellipse1_margin_top">-210dp</dimen>
+
+        <!-- Ellipse 2 dimensions -->
+        <dimen name="ellipse2_width">342dp</dimen>
+        <dimen name="ellipse2_height">342dp</dimen>
+        <dimen name="ellipse2_margin_left">207dp</dimen>
+        <dimen name="ellipse2_margin_top">-178dp</dimen>
+
+        <!-- Group container dimensions -->
+        <dimen name="group_width">225dp</dimen>
+        <dimen name="group_height">22dp</dimen>
+        <dimen name="group_margin_left">10dp</dimen>
+        <dimen name="group_margin_top">60dp</dimen>
+
+        <!-- Arrow dimensions -->
+        <dimen name="arrow_width">22dp</dimen>
+        <dimen name="arrow_height">22dp</dimen>
+
+        <!-- Notification text dimensions -->
+        <dimen name="notification_height">19dp</dimen>
+        <dimen name="notification_margin_left">147dp</dimen>
+        <dimen name="notification_margin_top">2dp</dimen>
+        <dimen name="notification_margin_bottom">1dp</dimen>
+        <dimen name="notification_text_size">14sp</dimen>
+
+        <!-- Frame 1 dimensions -->
+        <dimen name="frame1_width">350dp</dimen>
+        <dimen name="frame1_margin_left">32dp</dimen>
+        <dimen name="frame1_margin_top">795dp</dimen>
+        <dimen name="frame1_padding_bottom">16dp</dimen>
+        <dimen name="frame1_padding_left">32dp</dimen>
+        <dimen name="frame1_padding_right">32dp</dimen>
+        <dimen name="frame1_padding_top">16dp</dimen>
+
+        <!-- Book Now text dimensions -->
+        <dimen name="book_now_height">18dp</dimen>
+        <dimen name="book_now_text_size">14sp</dimen>
+
+        <!-- Frame 2 dimensions -->
+        <dimen name="frame2_margin_left">23dp</dimen>
+        <dimen name="frame2_margin_top">128dp</dimen>
+        <dimen name="frame2_margin_right">23dp</dimen>
+
+        <!-- Choose Date text dimensions -->
+        <dimen name="choose_date_margin_top">-41dp</dimen>
+        <dimen name="choose_date_margin_bottom">-12dp</dimen>
+        <dimen name="choose_date_line_height">36dp</dimen>
+        <dimen name="choose_date_text_size">24sp</dimen>
+
+        <!-- Frame 3 dimensions -->
+        <dimen name="frame3_height">48dp</dimen>
+        <dimen name="frame3_margin_left">21dp</dimen>
+        <dimen name="frame3_margin_top">27dp</dimen>
+        <dimen name="frame3_margin_right">21dp</dimen>
+
+        <!-- Select Date text dimensions -->
+        <dimen name="select_date_margin_left">17dp</dimen>
+        <dimen name="select_date_margin_top">13dp</dimen>
+        <dimen name="select_date_margin_bottom">-1dp</dimen>
+        <dimen name="select_date_text_size">15sp</dimen>
+
+        <!-- Calendar 1 dimensions -->
+        <dimen name="calendar1_width">17.51dp</dimen>
+        <dimen name="calendar1_height">17.51dp</dimen>
+        <dimen name="calendar1_margin_right">13.27dp</dimen>
+        <dimen name="calendar1_margin_top">14.8dp</dimen>
+        <dimen name="calendar1_margin_bottom">15.69dp</dimen>
+
+        <!-- Frame 4 dimensions -->
+        <dimen name="frame4_height">48dp</dimen>
+        <dimen name="frame4_margin_left">21dp</dimen>
+        <dimen name="frame4_margin_top">38dp</dimen>
+        <dimen name="frame4_margin_right">21dp</dimen>
+
+        <!-- Select Time text dimensions -->
+        <dimen name="select_time_margin_left">17dp</dimen>
+        <dimen name="select_time_margin_top">13dp</dimen>
+        <dimen name="select_time_margin_bottom">-1dp</dimen>
+        <dimen name="select_time_text_size">15sp</dimen>
+
+        <!-- Calendar 2 dimensions -->
+        <dimen name="calendar2_width">17.51dp</dimen>
+        <dimen name="calendar2_height">17.51dp</dimen>
+        <dimen name="calendar2_margin_right">13.27dp</dimen>
+        <dimen name="calendar2_margin_top">14.8dp</dimen>
+        <dimen name="calendar2_margin_bottom">15.69dp</dimen>
+
+        <!-- Clock dimensions -->
+        <dimen name="clock_width">16dp</dimen>
+        <dimen name="clock_height">15dp</dimen>
+        <dimen name="clock_margin_left">0.79dp</dimen>
+        <dimen name="clock_margin_top">1.2dp</dimen>
+
+
+    <dimen name="ellipse_width">445dp</dimen>
+    <dimen name="ellipse_height">406dp</dimen>
+    <dimen name="ellipse_margin_left">-37dp</dimen>
+    <dimen name="ellipse_margin_top">-210dp</dimen>
+
+    <dimen name="ellipse1_widthh">342dp</dimen>
+    <dimen name="ellipse1_heightt">342dp</dimen>
+    <dimen name="ellipse1_margin_leftt">207dp</dimen>
+    <dimen name="ellipse1_margin_topp">-178dp</dimen>
+
+    <!-- Header -->
+    <dimen name="header_width">258dp</dimen>
+    <dimen name="header_height">22dp</dimen>
+    <dimen name="header_margin_left">10dp</dimen>
+    <dimen name="header_margin_top">60dp</dimen>
+
+    <dimen name="arrow_widthh">22dp</dimen>
+    <dimen name="arrow_heightt">22dp</dimen>
+
+    <dimen name="header_text_height">19dp</dimen>
+    <dimen name="header_text_margin_left">115dp</dimen>
+    <dimen name="header_text_margin_top">2dp</dimen>
+    <dimen name="header_text_margin_bottom">1dp</dimen>
+    <dimen name="header_text_size">14sp</dimen>
+
+    <!-- Pay Now Button -->
+    <dimen name="button_width">350dp</dimen>
+    <dimen name="button_margin_left">32dp</dimen>
+    <dimen name="button_margin_top">795dp</dimen>
+    <dimen name="button_padding">16dp</dimen>
+    <dimen name="button_text_height">18dp</dimen>
+    <dimen name="button_text_size">14sp</dimen>
+    <dimen name="button_height_plus_margin">100dp</dimen> <!-- Button height + margin -->
+
+    <!-- Booking Details -->
+    <dimen name="details_margin_left">23dp</dimen>
+    <dimen name="details_margin_top">128dp</dimen>
+    <dimen name="details_margin_right">23dp</dimen>
+    <dimen name="details_padding">16dp</dimen>
+
+    <!-- Text Elements -->
+    <dimen name="text_height">19dp</dimen>
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="label_value_spacing">8dp</dimen>
+    <dimen name="date_time_spacing">32dp</dimen>
+    <dimen name="row_spacing">16dp</dimen>
+
+    <dimen name="confirmation_card_margin">16dp</dimen>
+    <dimen name="confirmation_card_corner_radius">12dp</dimen>
+    <dimen name="confirmation_header_height">180dp</dimen>
+    <dimen name="confirmation_success_icon_size">64dp</dimen>
+
+</resources>

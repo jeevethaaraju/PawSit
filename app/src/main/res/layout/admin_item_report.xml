@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/bg_white_with_shadow"
+    android:elevation="4dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Complaint ID -->
+        <TextView
+            android:id="@+id/text_complaint_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complaint ID: 123"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <!-- Sitter ID -->
+        <TextView
+            android:id="@+id/text_sitter_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sitter ID: 789"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="4dp" />
+
+        <!-- Booking ID -->
+        <TextView
+            android:id="@+id/text_booking_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking ID: 456"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="4dp" />
+
+        <!-- Created At -->
+        <TextView
+            android:id="@+id/text_created_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Created At: 2024-06-01"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: Pending"
+            android:textSize="14sp"
+            android:textColor="#808080"
+            android:textStyle="italic"
+            android:layout_marginTop="4dp" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description: Complaint details here..."
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+
+        <ImageView
+            android:id="@+id/image_proof"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#E0E0E0"
+            android:scaleType="centerCrop"
+            android:contentDescription="Proof photo preview"
+            android:padding="4dp"
+            android:layout_gravity="start" />
+
+        <!-- Spinner -->
+        <Spinner
+            android:id="@+id/spinner_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp" />
+
+        <!-- Remove Pet Sitter Button -->
+        <Button
+            android:id="@+id/button_remove_pet_sitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Pet Sitter"
+            android:backgroundTint="@color/red"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+        <!-- Refund Button -->
+        <Button
+            android:id="@+id/button_refund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refund"
+            android:layout_marginLeft="200dp"
+            android:visibility="gone"
+            android:enabled="false"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</FrameLayout>

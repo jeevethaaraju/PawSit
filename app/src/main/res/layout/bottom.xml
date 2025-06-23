@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Bottom Navigation with Curved Top Corners -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_nav_background"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="10dp"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/pawlogo" />
+
+        <ImageView
+            android:id="@+id/ordericon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/noty" />
+
+        <ImageView
+            android:id="@+id/mapicon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/maplogo" />
+
+        <ImageView
+            android:id="@+id/reporticon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/comment" />
+
+        <ImageView
+            android:id="@+id/profilehome"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/profiler" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

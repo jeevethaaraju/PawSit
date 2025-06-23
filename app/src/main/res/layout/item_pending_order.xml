@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/bg_white_with_shadow"
+    android:elevation="4dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <!-- Complaint ID -->
+        <TextView
+            android:id="@+id/text_booking_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking ID: 123"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_petowner_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pet Owner Id: 25"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="4dp" />
+
+
+        <!-- Booking ID -->
+        <TextView
+            android:id="@+id/text_petsitter_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pet Sitter Id: 25"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/text_Service_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Name: Sugi"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/text_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From: 2025-06-07"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/text_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To: 2025-06-07"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="4dp" />
+        <TextView
+            android:id="@+id/booking_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking at: 2025-06-07"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="4dp" />
+        <!-- Created At -->
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total:RM23.00"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+
+    </LinearLayout>
+</FrameLayout>

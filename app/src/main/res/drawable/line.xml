@@ -1,0 +1,6 @@
+<!-- res/drawable/drawable_16.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <size android:height="1dp" />  <!-- Adjust height for thickness -->
+    <solid android:color="#D3D3D3" />  <!-- Line color -->
+</shape>

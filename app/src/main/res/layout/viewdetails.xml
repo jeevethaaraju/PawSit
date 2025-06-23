@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp">
+
+            <!-- Background Ellipses -->
+            <ImageView
+                android:id="@+id/img_ellipse1"
+                android:layout_width="445dp"
+                android:layout_height="406dp"
+                android:layout_marginLeft="-37dp"
+                android:layout_marginTop="-210dp"
+                android:background="@drawable/drawable_shape_1"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/img_ellipse2"
+                android:layout_width="342dp"
+                android:layout_height="342dp"
+                android:layout_marginLeft="207dp"
+                android:layout_marginTop="-178dp"
+                android:background="@drawable/drawable_shape_2"
+                android:scaleType="centerInside" />
+
+            <!-- Header -->
+            <RelativeLayout
+                android:id="@+id/header_container"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/img_arrow_left"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/back_arrow" />
+
+                <TextView
+                    android:id="@+id/text_sitter_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Sitter Details"
+                    android:textColor="#FF181D27"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <!-- Horizontal ScrollView for Images -->
+            <HorizontalScrollView
+                android:id="@+id/img_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:layout_below="@id/header_container"
+                android:layout_marginTop="40dp"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_image1"
+                        android:layout_width="248dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hugdog" />
+
+                    <ImageView
+                        android:id="@+id/img_image2"
+                        android:layout_width="248dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hugdog" />
+
+                    <ImageView
+                        android:id="@+id/img_image3"
+                        android:layout_width="248dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hugdog" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Details Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_scrollview"
+                android:layout_marginTop="28dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/text_jane"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service Name"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Jane"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/text_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Description"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_distance_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0.2km"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Number of pets accepted -->
+                <TextView
+                    android:id="@+id/numpets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Number of pets accepted at one time"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_pet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="2"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Pet Types -->
+                <TextView
+                    android:id="@+id/text_accepted_pet_types"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Accepted Pet Types"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_dog"
+                        android:layout_width="32dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/dogicon" />
+
+                    <ImageView
+                        android:id="@+id/img_cat"
+                        android:layout_width="28dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/caticon" />
+                </LinearLayout>
+
+                <!-- Pet Size -->
+                <TextView
+                    android:id="@+id/text_accepted_pet_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Accepted Pet Size"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_accepted_pet_size_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="1-5Kg"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Adult Supervision -->
+                <TextView
+                    android:id="@+id/text_adult_supervision_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Level Of Adult Supervision"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_unattended_pets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Pets will never be unattended"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Walks per day -->
+                <TextView
+                    android:id="@+id/text_walks_per_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="The Number of Walks Provided per Day"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_walks_per_day_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="2"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Potty breaks -->
+                <TextView
+                    android:id="@+id/text_potty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="The Number of Potty Provided per Day"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/potty_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="2"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Living Type -->
+                <TextView
+                    android:id="@+id/live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Where you live in"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/live_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="House"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Services -->
+                <TextView
+                    android:id="@+id/service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Services Provided"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/service_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Bath"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Emergency Transport -->
+                <TextView
+                    android:id="@+id/text_emergency_transport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Emergency transport"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_emergency_transport_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Yes"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp" />
+
+                <!-- Location -->
+                <!-- Location Section (Modified) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Location Text (Left Side) -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Location"
+                            android:textColor="#FF181D27"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/text_location_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="29,jln beringin 8"
+                            android:textColor="#FF6D6A6A"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <!-- Get Direction Button (Right Side) -->
+                    <Button
+                        android:id="@+id/btn_get_direction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/button_direction_shape"
+                        android:drawableStart="@drawable/ic_direction"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="#FFFFFF"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="Get Direction"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:elevation="2dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="013"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Fixed Bottom Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/img_rectangle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rm45/per day"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:id="@+id/btn_get_book"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/drawable_shape_7"
+            android:paddingHorizontal="16dp"
+            android:text="Book Now"
+            android:textColor="#FFFF9500"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_get_contact"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/drawable_shape_7"
+            android:paddingHorizontal="16dp"
+            android:text="Contact Now"
+            android:textColor="#FFFF9500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</RelativeLayout>

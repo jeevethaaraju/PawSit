@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/container_root">
+
+    <!-- Pet image -->
+    <ImageView
+        android:id="@+id/img_pet_profile_picture"
+        android:layout_width="match_parent"
+        android:layout_height="403dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/second_dog" />
+
+    <!-- Back arrow on top-left -->
+    <ImageView
+        android:id="@+id/img_vector1"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="top|start"
+        android:src="@drawable/back_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:padding="6dp" />
+
+    <!-- Bottom card description -->
+    <LinearLayout
+        android:id="@+id/container_description_card"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/container_description_card"
+        android:gravity="left|top"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/container_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="26.27dp"
+        android:paddingLeft="21.89dp"
+        android:paddingRight="21.89dp"
+        android:paddingTop="43.78dp">
+
+        <!-- Scroll indicator -->
+        <LinearLayout
+            android:id="@+id/container_scroll_circles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/image_scroll_circle"
+                android:layout_width="7.52dp"
+                android:layout_height="7.52dp"
+                android:background="@drawable/image_scroll_circle2"
+                android:scaleType="centerInside" />
+            <ImageView
+                android:id="@+id/image_scroll_circle1"
+                android:layout_width="7.52dp"
+                android:layout_height="7.52dp"
+                android:layout_marginLeft="8.76dp"
+                android:background="@drawable/image_scroll_circle1"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/image_scroll_circle2"
+                android:layout_width="7.52dp"
+                android:layout_height="7.52dp"
+                android:layout_marginLeft="8.76dp"
+                android:background="@drawable/image_scroll_circle2"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+        <!-- Title -->
+        <TextView
+            android:id="@+id/text_loving_care"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loving Care for Your \nPets"
+            android:textSize="26sp"
+            android:textColor="#141415"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/text_experienced_sitters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find experienced pet sitters who treat your pets like family.
+Ensure your dogs and cats feel safe, happy, and loved.
+Trust the best caregivers for your furry friends!"
+            android:textSize="16sp"
+            android:textColor="#A1A1A1"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/container_btn_group"
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:background="@drawable/container_btn_group"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:paddingLeft="21.89dp"
+            android:paddingTop="17.51dp"
+            android:paddingRight="21.89dp"
+            android:paddingBottom="35.03dp">
+
+            <LinearLayout
+                android:id="@+id/container_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/container_btn"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="26.27dp"
+                android:paddingTop="15.32dp"
+                android:paddingRight="26.27dp"
+                android:paddingBottom="14.23dp">
+
+                <TextView
+                    android:id="@+id/text_btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Next"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="17.51dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

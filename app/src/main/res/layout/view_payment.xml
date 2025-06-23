@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_view_payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Back Arrow Icon -->
+    <ImageView
+        android:id="@+id/image_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="Back"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Title "Payment" -->
+    <TextView
+        android:id="@+id/text_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment"
+        android:textColor="#F08626"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_icon"
+        android:layout_marginTop="24dp"/>
+
+    <!-- FPX Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fpx_container"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@drawable/drawable_shape_unselected"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/text_payment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/image_fpx"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="FPX"
+            android:src="@drawable/fpx"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/text_fpx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FPX"
+            android:textColor="#454545"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@id/image_fpx"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"/>
+
+        <ImageView
+            android:id="@+id/image_arrow_fpx"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrow_right"
+            android:contentDescription="Go to FPX"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Visa Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/visa_container"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@drawable/drawable_shape_unselected"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/fpx_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/image_visa"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Visa"
+            android:src="@drawable/visa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/visa_text_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/image_visa"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/text_visa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visa"
+                android:textColor="#454545"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="****5645"
+                android:textColor="#F08626"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/text_visa"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="4dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/image_arrow_visa"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrow_right"
+            android:contentDescription="Go to Visa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Wallet Container (New) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wallet_container"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@drawable/drawable_shape_unselected"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/visa_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/image_wallet"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Wallet"
+            android:src="@drawable/wallet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/text_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wallet"
+            android:textColor="#454545"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@id/image_wallet"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/text_wallet_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balance: $50.00"
+        android:textColor="#F08626"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/text_wallet"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+
+
+        <ImageView
+            android:id="@+id/image_arrow_wallet"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrow_right"
+            android:contentDescription="Go to Wallet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Pay Button -->
+    <Button
+        android:id="@+id/button_pay"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="Pay"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#F08626"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- WebView for payment, full screen overlay -->
+    <WebView
+        android:id="@+id/webview_payment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

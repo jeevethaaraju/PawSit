@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_root"
+    android:layout_width="match_parent"
+    android:layout_height="889dp"
+    android:background="@drawable/container_root">
+
+    <ImageView
+        android:id="@+id/image_main"
+        android:layout_width="match_parent"
+        android:layout_height="563.91dp"
+        android:layout_marginLeft="0.15dp"
+        android:layout_marginBottom="325.09dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cat" />
+
+    <LinearLayout
+        android:id="@+id/container_description_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0.12dp"
+        android:layout_marginBottom="0dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/container_description_card"
+        android:gravity="left|top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="26.27dp"
+            android:paddingLeft="21.89dp"
+            android:paddingRight="21.89dp"
+            android:paddingTop="43.78dp">
+
+            <LinearLayout
+                android:id="@+id/container_scroll_circles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image_scroll_circle"
+                    android:layout_width="17.52dp"
+                    android:layout_height="6.58dp"
+                    android:background="@drawable/image_scroll_circle1"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/image_scroll_circle1"
+                    android:layout_width="17.52dp"
+                    android:layout_height="6.58dp"
+                    android:layout_marginLeft="8.76dp"
+                    android:background="@drawable/image_scroll_circle1"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/image_scroll_circle2"
+                    android:layout_width="17.52dp"
+                    android:layout_height="6.58dp"
+                    android:layout_marginLeft="8.76dp"
+                    android:background="@drawable/image_scroll_circle1"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_pet_care_title"
+                android:layout_width="366.73dp"
+                android:layout_height="78.17dp"
+                android:layout_marginTop="26.27dp"
+                android:gravity="center_horizontal|top"
+                android:includeFontPadding="false"
+                android:lineHeight="39.41dp"
+                android:text="Pet Care In Your Neighbourhood"
+                android:textColor="#FF141415"
+                android:textSize="26.27dp" />
+
+            <TextView
+                android:id="@+id/text_pet_care_description"
+                android:layout_width="366.73dp"
+                android:layout_height="78.17dp"
+                android:layout_marginTop="8.76dp"
+                android:gravity="center_horizontal|top"
+                android:includeFontPadding="false"
+                android:lineHeight="26.27dp"
+                android:text="Connect with trusted pet caregivers near you for boarding, walking, house sitting, or day care—exclusively for dogs &amp; cats!"
+                android:textColor="#FFA1A1A1"
+                android:textSize="17.51dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_btn_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/container_btn_group"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:paddingBottom="35.03dp"
+            android:paddingLeft="21.89dp"
+            android:paddingRight="21.89dp"
+            android:paddingTop="17.51dp">
+
+            <LinearLayout
+                android:id="@+id/container_btn"
+                android:layout_width="366.71dp"
+                android:layout_height="52.72dp"
+                android:background="@drawable/container_btn"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="14.23dp"
+                android:paddingLeft="26.27dp"
+                android:paddingRight="26.27dp"
+                android:paddingTop="15.32dp">
+
+                <TextView
+                    android:id="@+id/text_btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Next"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="17.51dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

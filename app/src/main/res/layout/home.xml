@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_shape">
+
+    <!-- Background Elements -->
+    <ImageView
+        android:layout_width="445dp"
+        android:layout_height="406dp"
+        android:layout_marginLeft="-37dp"
+        android:layout_marginTop="-210dp"
+        android:layout_gravity="top|left"
+        android:background="@drawable/drawable_shape_1"
+        android:scaleType="centerInside" />
+
+    <ImageView
+        android:layout_width="342dp"
+        android:layout_height="342dp"
+        android:layout_marginLeft="207dp"
+        android:layout_marginTop="-178dp"
+        android:layout_gravity="top|left"
+        android:background="@drawable/drawable_shape_2"
+        android:scaleType="centerInside" />
+
+    <!-- Profile Icon -->
+    <ImageView
+        android:id="@+id/profileicon"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="66dp"
+        android:layout_gravity="top|left"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_background"
+        android:src="@drawable/icon"
+        android:clipToOutline="true" />
+
+    <!-- App Logo and Name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_logo"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            app:lottie_rawRes="@raw/pawanime"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:padding="8dp"
+            android:shadowColor="#66000000"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:layout_marginRight="50dp"
+            android:shadowRadius="2"
+            android:text="PawSit"
+            android:textColor="#8B4513"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Welcome Box -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginRight="24dp"
+        android:layout_gravity="top|left"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <!-- Welcome Back Text -->
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:text="Jeevethaa"
+                android:textColor="#FF141415"
+                android:textSize="16sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_hi"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:lottie_rawRes="@raw/hi"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:text="Welcome Back,"
+                android:textColor="#FF141415"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <!-- Wallet Divider -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="#E0E0E0"/>
+
+            <!-- Wallet Section -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WALLET (RM)"
+                    android:textColor="#FFFFBC11"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/wallet_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0.00"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Decorative Paw Line -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginRight="24dp"
+        android:layout_gravity="top|left"
+        android:scaleType="fitXY"
+        android:src="@drawable/paw_back"/>
+
+    <!-- Your Pets Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="248dp"
+        android:layout_gravity="top|left"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Your pets"
+        android:textColor="#FF000000"
+        android:textSize="20dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="280dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <LinearLayout
+            android:id="@+id/petsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Existing pets will be added programmatically -->
+
+            <!-- Add button (always last) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addPetCard"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="36dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@drawable/circle_background"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/plus" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Pet Sitters Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="388dp"
+        android:layout_gravity="top|left"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:text="Pet Sitters Near You"
+        android:textColor="#FF000000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/seeMoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="393dp"
+        android:text="See More"/>
+
+    <!-- Horizontal ScrollView for Pet Sitters -->
+    <HorizontalScrollView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_marginTop="420dp">
+
+        <LinearLayout
+            android:id="@+id/cardview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Card 1 -->
+            <FrameLayout
+                android:layout_width="180dp"
+                android:layout_height="210dp"
+                android:layout_gravity="top|left"
+                android:layout_marginRight="15dp">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="210dp"
+                    android:layout_gravity="top|left"
+                    android:background="@drawable/rounded_card_background"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/paww" />
+
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/hugdog"
+                    android:background="@drawable/rounded_card_background"
+                    android:clipToOutline="true"/>
+
+                <TextView
+                    android:id="@+id/firstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="110dp"
+                    android:text="Lina Amane"
+                    android:textColor="#FF141415"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="139dp"
+                    android:text="1.2 km away from you"
+                    android:textColor="#FF000000"
+                    android:textSize="15.00dp" />
+
+                <Button
+                    android:id="@+id/bookButton"
+                    android:layout_width="115dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="top|left"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="170dp"
+                    android:text="Book now"
+                    android:textColor="#FFFF9500"
+                    android:background="@drawable/drawable_shape_7"
+                    android:scaleType="centerInside" />
+            </FrameLayout>
+
+            <!-- Card 2 -->
+            <FrameLayout
+                android:layout_width="180dp"
+                android:layout_height="210dp"
+                android:layout_gravity="top|left"
+                android:layout_marginRight="15dp">
+                <!-- Card 2 content same as Card 1 -->
+            </FrameLayout>
+
+            <!-- Card 3 -->
+            <FrameLayout
+                android:layout_width="180dp"
+                android:layout_height="210dp"
+                android:layout_gravity="top|left"
+                android:layout_marginRight="15dp">
+                <!-- Card 3 content same as Card 1 -->
+            </FrameLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Bottom Navigation (Replaced with include) -->
+    <include
+        android:id="@+id/bottomNav"
+        layout="@layout/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+</FrameLayout>

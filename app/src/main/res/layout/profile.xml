@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/container_profile"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/container_button"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Back arrow and Profile title -->
+            <RelativeLayout
+                android:id="@+id/container_group1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/image_arrow_left"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/back_arrow" />
+
+                <TextView
+                    android:id="@+id/text_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:text="Profile"
+                    android:textColor="#FF181D27"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <!-- Welcome back text -->
+            <TextView
+                android:id="@+id/text_welcome_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_group1"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:text="Welcome Back,"
+                android:textColor="#FF141415"
+                android:textSize="24sp" />
+
+            <!-- Profile icon -->
+            <ImageView
+                android:id="@+id/container_group3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/text_welcome_back"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/circle"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon" />
+
+            <!-- Edit icon -->
+            <ImageView
+                android:id="@+id/image_pencil_simple"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignEnd="@id/container_group3"
+                android:layout_alignBottom="@id/container_group3"
+                android:layout_marginBottom="-16dp"
+                android:layout_marginEnd="-16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/edit_icon" />
+
+            <!-- Name and email -->
+            <LinearLayout
+                android:id="@+id/container_group2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_group3"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/text_full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Itunuoluwa Abidoye"
+                    android:textColor="#FF181D27"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/text_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Itunuoluwa@petra.africa"
+                    android:textColor="#FFABABAB"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Form fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_group2"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <!-- First name -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/container_frame1"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/drawable_shape_5">
+
+                    <EditText
+                        android:id="@+id/text_first_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:includeFontPadding="false"
+                        android:text="What's your first name?"
+                        android:textColor="#FF6D6A6A"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- Last name -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/container_frame2"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/drawable_shape_5">
+
+                    <EditText
+                        android:id="@+id/text_last_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:includeFontPadding="false"
+                        android:text="What's your last name?"
+                        android:textColor="#FF6D6A6A"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- Gender -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/container_frame5"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/drawable_shape_5">
+
+                    <Spinner
+                        android:id="@+id/gender_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:id="@+id/image_shape"
+                        android:layout_width="12dp"
+                        android:layout_height="8dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerInside" />
+                </RelativeLayout>
+
+                <!-- Date of birth -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Birth Date"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/container_frame4"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/drawable_shape_5">
+
+                    <EditText
+                        android:id="@+id/text_date_of_birth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:includeFontPadding="false"
+                        android:text="What's your date of birth?"
+                        android:textColor="#FF6D6A6A"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/image_calendar"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/calender" />
+                </RelativeLayout>
+
+                <!-- Phone number -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/container_frame6"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/drawable_shape_5">
+
+                    <EditText
+                        android:id="@+id/text_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:includeFontPadding="false"
+                        android:text="What's your phone number?"
+                        android:textColor="#FF6D6A6A"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <!-- Address -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/container_frame7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/drawable_shape_5">
+
+                    <EditText
+                        android:id="@+id/text_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:includeFontPadding="false"
+                        android:text="What's your location?"
+                        android:textColor="#FF6D6A6A"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Update button - now positioned at bottom center -->
+    <Button
+        android:id="@+id/container_button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:text="Update Profile"
+        android:textColor="#FFFFFFFF"
+        android:background="@drawable/img_rectangle" />
+</RelativeLayout>

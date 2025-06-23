@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">PetSit</string>
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+
+
+    </string-array>
+
+            <string-array name="pet_types">
+                <item>Dog</item>
+                <item>Cat</item>
+            </string-array>
+    <string-array name="pet_size">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+    <string-array name="dog_breeds">
+        <item>Labrador</item>
+        <item>Bulldog</item>
+        <item>Beagle</item>
+        <item>Poodle</item>
+    </string-array>
+
+    <!-- Cat breeds -->
+    <string-array name="cat_breeds">
+        <item>Siamese</item>
+        <item>Persian</item>
+        <item>Maine Coon</item>
+        <item>Ragdoll</item>
+    </string-array>
+
+
+    <string-array name="pet_gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string name="google_maps_key">AIzaSyAU_0owJ3SjdwRzBiHvQv4FizP42k9S2gA</string>
+
+    <string-array name="where_options">
+        <item>Free roam of the house</item>
+        <item>Outside in my private yard</item>
+        <item>Sectioned off area of the house</item>
+        <item>The garage area</item>
+        <item>In separate rooms</item>
+    </string-array>
+
+    <string-array name="potty_options">
+        <item>1-2</item>
+        <item>3-4</item>
+        <item>more than 5</item>
+    </string-array>
+
+    <string-array name="walks_options">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3+</item>
+    </string-array>
+
+    <string-array name="home_options">
+        <item>Apartment/Condo</item>
+        <item>Townhouse</item>
+        <item>House</item>
+    </string-array>
+
+    <string-array name="transport_options">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
+    <string-array name="complaint_status_options">
+        <item>pending</item>
+        <item>reviewed</item>
+        <item>rejected</item>
+    </string-array>
+
+
+
+    <string-array name="months_array">
+        <item>All Months</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="booking_status_array">
+        <item>All Statuses</item>
+        <item>Pending</item>
+        <item>Approved</item>
+        <item>Completed</item>
+        <item>Cancelled</item>
+        <item>Rejected</item>
+    </string-array>
+</resources>

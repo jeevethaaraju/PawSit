@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/bg_white_with_shadow"
+    android:elevation="4dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_group"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:id="@+id/container_group3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/image_group"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_order_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order #90897"
+                    android:textColor="#FF000000"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/text_placed_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Placed on October 19 2021"
+                    android:textColor="#FF868889"
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/text_from_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="From: 01 Jun 2025, 10:00 AM"
+                    android:textColor="#FF000000"
+                    android:textSize="10sp" />
+
+                <!-- To Date & Time -->
+                <TextView
+                    android:id="@+id/text_to_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="To: 15 Jun 2025, 5:00 PM"
+                    android:textColor="#FF000000"
+                    android:textSize="10sp" />
+                    />
+                <TextView
+                    android:id="@+id/text_pet_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Pet types: Dog"
+                    android:textColor="#FF000000"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_pets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pets: 10"
+                        android:textColor="#FF000000"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/text_total_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:gravity="end"
+                        android:text="Total:"
+                        android:textColor="#FF000000"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/arrow_up"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_upp" />
+        </RelativeLayout>
+
+        <!-- Expanded content - initially hidden -->
+        <LinearLayout
+            android:id="@+id/timeline_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"
+            android:paddingStart="16dp"
+            android:paddingBottom="8dp">
+
+            <!-- Timeline item: Order placed -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/orange_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Order placed"
+                    android:textColor="#FF9800"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Timeline item: Order approved/rejected -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/orange_circle" />
+
+                <TextView
+                    android:id="@+id/text_approval_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Order approved/rejected"
+                    android:textColor="#FF9800"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Approve/Reject buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btn_approve"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:text="Approve"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    android:background="@drawable/btn_approve_selector"
+                    android:textColor="@color/btn_text_selector"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
+
+                <Button
+                    android:id="@+id/btn_reject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="Reject"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    android:background="@drawable/btn_reject_selector"
+                    android:textColor="@color/btn_text_selector"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
+
+                <Button
+                    android:id="@+id/btn_complete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="Complete"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    android:background="@drawable/btn_complete_selector"
+                    android:textColor="@color/btn_text_selector"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

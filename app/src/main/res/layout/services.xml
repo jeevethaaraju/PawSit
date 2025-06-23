@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/drawable_shape">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <!-- Header Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/image_arrow_left"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_arrow" />
+
+            <TextView
+                android:id="@+id/text_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Service"
+                android:textColor="#FF181D27"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <!-- Profile Image Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"/>
+
+        <!-- User Info Section -->
+
+        <!-- Input Fields Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp">
+
+            <!-- First Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service Name"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/text_service_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_shape_5"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:hint="Give a Name to Your Service"
+                    android:textColor="#FF181D27"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <!-- Last Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Listing Summary"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/text_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_shape_5"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:hint="Give an overview of what service you offer"
+                    android:textColor="#FF181D27"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <!-- Phone Number -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number of Pets"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/pets"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_shape_5"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:hint="How many pets can you watch at one time?"
+                    android:inputType="phone"
+                    android:textColor="#FF181D27"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Accepted pet types"
+                android:textColor="#FF6D6A6A"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Cat"
+                    android:textColor="#FF6D6A6A"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_dog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dog"
+                    android:textColor="#FF6D6A6A"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Accepted pet size"
+                android:textColor="#FF6D6A6A"
+                android:textSize="14sp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:layout_marginTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox_size1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="1-5kg"
+                    android:textColor="#FF6D6A6A"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_size2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="5-10kg"
+                    android:textColor="#FF6D6A6A"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_size3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="10-20kg"
+                    android:textColor="#FF6D6A6A"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_size4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="20+kg"
+                    android:textColor="#FF6D6A6A"/>
+            </GridLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Where will pets be if they are left unsupervised at your home?"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/where_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_shape_5"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How many potty breaks provided?"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/potty_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_shape_5"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How many walks provided?"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/walks_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_shape_5"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What best describes the home u live in?"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/home_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_shape_5"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do you have transport for emergencies?"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/transport_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_shape_5"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price"
+                        android:textColor="#FF6D6A6A"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="4dp"/>
+
+                    <EditText
+                        android:id="@+id/edit_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/drawable_shape_5"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:hint="How much is you rate?"
+                        android:inputType="phone"
+                        android:textColor="#FF181D27"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Services"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="14sp"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:layout_marginTop="8dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_bath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:text="Bath"
+                        android:textColor="#FF6D6A6A"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox_walking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:text="Walking"
+                        android:textColor="#FF6D6A6A"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox_feeding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:text="Feeding"
+                        android:textColor="#FF6D6A6A"/>
+
+                    <CheckBox
+                        android:id="@+id/checkbox_playing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:text="Playing"
+                        android:textColor="#FF6D6A6A"/>
+                </GridLayout>
+
+                <!-- Image Upload Section (3 images) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- First Image -->
+                    <RelativeLayout
+                        android:id="@+id/image_container1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
+                        android:padding="4dp">
+
+                        <ImageView
+                            android:id="@+id/selected_image_view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_upload_image1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/drawable_shape_5"
+                            android:text="+ Add"
+                            android:textColor="#FF181D27"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_delete_image1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circle_background"
+                            android:src="@drawable/ic_delete"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <!-- Second Image -->
+                    <RelativeLayout
+                        android:id="@+id/image_container2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
+                        android:padding="4dp">
+
+                        <ImageView
+                            android:id="@+id/selected_image_view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_upload_image2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/drawable_shape_5"
+                            android:text="+ Add"
+                            android:textColor="#FF181D27"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_delete_image2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circle_background"
+                            android:src="@drawable/ic_delete"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <!-- Third Image -->
+                    <RelativeLayout
+                        android:id="@+id/image_container3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:padding="4dp">
+
+                        <ImageView
+                            android:id="@+id/selected_image_view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_upload_image3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/drawable_shape_5"
+                            android:text="+ Add"
+                            android:textColor="#FF181D27"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_delete_image3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/circle_background"
+                            android:src="@drawable/ic_delete"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Services Section -->
+
+
+        <!-- Update Button -->
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/img_rectangle"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</ScrollView>

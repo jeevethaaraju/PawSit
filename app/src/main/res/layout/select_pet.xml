@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_shape">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Background Ellipses -->
+            <ImageView
+                android:id="@+id/img_ellipse"
+                android:layout_width="445dp"
+                android:layout_height="406dp"
+                android:layout_marginStart="-37dp"
+                android:layout_marginTop="-210dp"
+                android:layout_gravity="top|start"
+                android:background="@drawable/drawable_shape_1"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/img_ellipse1"
+                android:layout_width="342dp"
+                android:layout_height="342dp"
+                android:layout_marginStart="207dp"
+                android:layout_marginTop="-178dp"
+                android:layout_gravity="top|start"
+                android:background="@drawable/drawable_shape_2"
+                android:scaleType="centerInside" />
+
+            <!-- Top Group with Title and Profile -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <TextView
+                    android:id="@+id/text_select_your_pet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="Select your pet"
+                    android:textColor="#FF181D27"
+                    android:textSize="14sp"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/img_arrow_left"
+                    android:layout_width="22dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/back_arrow" />
+
+                <ImageView
+                    android:id="@+id/img_ellipse2"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_gravity="start"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle"
+                    android:clipToOutline="true" />
+
+                <TextView
+                    android:id="@+id/text_youre_booking_with"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="57dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_gravity="start"
+                    android:text="You’re booking with"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/text_lina_amane"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="57dp"
+                   android:layout_marginLeft="180dp"
+                    android:text="Lina Amane"
+                    android:textColor="#FF6D6A6A"
+                    android:textSize="15sp"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </FrameLayout>
+
+            <!-- Card-like Carousel container -->
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="180dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp">
+
+                    <LinearLayout
+                        android:id="@+id/petsContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <!-- Existing pets will be added programmatically -->
+
+                        <!-- Add button (always last) -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/addPetCard"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:layout_marginEnd="16dp"
+                            app:cardCornerRadius="36dp"
+                            app:cardElevation="4dp"
+                            app:cardBackgroundColor="@color/white">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="75dp"
+                                android:background="@drawable/circle_background"
+                                android:clipToOutline="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/plus" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+        </FrameLayout>
+    </ScrollView>
+
+    <!-- Fixed Bottom NEXT Button -->
+    <LinearLayout
+        android:id="@+id/container_frame"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/img_rectangle"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/text_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </LinearLayout>
+</FrameLayout>

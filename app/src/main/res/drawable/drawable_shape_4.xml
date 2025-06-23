@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Gradient Background (with a slight orange shade) -->
+    <gradient
+        android:angle="45"
+        android:startColor="#FFFBBC05"
+        android:centerColor="#FFD580"
+        android:endColor="#FFD580"
+        android:type="linear" />
+
+    <!-- Stroke for Border -->
+    <stroke
+        android:width="1dp"
+    android:color="#FFD580" /> <!-- Retained the original color for the border -->
+
+    <!-- Rounded corners -->
+    <corners android:radius="10dp" /> <!-- Slightly increased corner radius for a smoother look -->
+
+    <!-- Padding to make icons inside the footer box more spacious -->
+    <padding
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp"
+        android:bottom="8dp" />
+</shape>

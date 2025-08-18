@@ -368,6 +368,7 @@ public class ListingActivity extends AppCompatActivity {
 
     private JSONObject buildPostData(boolean includeServiceId) {
         if (!validateInputFields()) {
+            Log.e(TAG, "Validation failed - cannot build post data");
             return null;
         }
 
@@ -375,21 +376,32 @@ public class ListingActivity extends AppCompatActivity {
             SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
             JSONObject postData = new JSONObject();
 
+            // Add basic identifiers
             if (includeServiceId && currentServiceId != -1) {
+                postData.put("petsitter_id", preferences.getInt(KEY_SITTER_ID, -1));
                 postData.put("id", currentServiceId);
+                Log.d(TAG, "Including service ID in update: " + currentServiceId);
             }
 
+            // Add all service data
             addBasicServiceInfo(postData, preferences);
             addPetPreferences(postData);
             addServiceOptions(postData);
+
+            // Add price and other fields
             postData.put("price", editPrice.getText().toString().trim());
+
+            // Debug logging
+            Log.d(TAG, "Constructed POST data: " + postData.toString(2));
 
             return postData;
         } catch (JSONException e) {
-            handleError("Error preparing data", e);
+            Log.e(TAG, "JSON construction error", e);
+            handleError("Error preparing data: " + e.getMessage(), e);
             return null;
         }
     }
+
 
     private boolean validateInputFields() {
         String serviceName = textServiceName.getText().toString().trim();
@@ -477,24 +489,47 @@ public class ListingActivity extends AppCompatActivity {
         postData.put("accept_pet", acceptPet.toString());
 
         StringBuilder acceptPetSize = new StringBuilder();
-        if (sizeSmallChecked) acceptPetSize.append("small,");
-        if (sizeMediumChecked) acceptPetSize.append("medium,");
-        if (sizeLargeChecked) acceptPetSize.append("large,");
-        if (sizeGiantChecked) acceptPetSize.append("giant,");
+        if (sizeSmallChecked) acceptPetSize.append("small(1-5kg),");
+        if (sizeMediumChecked) acceptPetSize.append("medium(5-10kg),");
+        if (sizeLargeChecked) acceptPetSize.append("large(10-20kg),");
+        if (sizeGiantChecked) acceptPetSize.append("giant(20+kg),");
         if (acceptPetSize.length() > 0) acceptPetSize.setLength(acceptPetSize.length() - 1);
-        postData.put("accept_petSize", acceptPetSize.toString());
+        postData.put("accept_petsize", acceptPetSize.toString());
     }
 
     private void addServiceOptions(JSONObject postData) throws JSONException {
-        boolean bathChecked = checkboxBath.isChecked();
-        boolean walkingChecked = checkboxWalking.isChecked();
-        boolean feedingChecked = checkboxFeeding.isChecked();
-        boolean playingChecked = checkboxPlaying.isChecked();
+        try {
+            boolean bathChecked = checkboxBath.isChecked();
+            boolean walkingChecked = checkboxWalking.isChecked();
+            boolean feedingChecked = checkboxFeeding.isChecked();
+            boolean playingChecked = checkboxPlaying.isChecked();
 
-        postData.put("bath_checked", bathChecked);
-        postData.put("walking_checked", walkingChecked);
-        postData.put("feeding_checked", feedingChecked);
-        postData.put("playing_checked", playingChecked);
+            // Individual checks for debugging
+            postData.put("bath_checked", bathChecked);
+            postData.put("walking_checked", walkingChecked);
+            postData.put("feeding_checked", feedingChecked);
+            postData.put("playing_checked", playingChecked);
+
+            // Combined service string - this is what PHP expects in the 'service' field
+            StringBuilder services = new StringBuilder();
+            if (bathChecked) services.append("bath,");
+            if (walkingChecked) services.append("walking,");
+            if (feedingChecked) services.append("feeding,");
+            if (playingChecked) services.append("playing,");
+
+            // Remove trailing comma if exists
+            if (services.length() > 0) {
+                services.setLength(services.length() - 1);
+            }
+
+            // This is the critical line - make sure to include the combined service string
+            postData.put("service", services.toString());
+
+            Log.d(TAG, "Service options: " + services.toString());
+        } catch (Exception e) {
+            Log.e(TAG, "Error adding service options", e);
+            throw e;
+        }
     }
 
     private void handleError(String message, Exception e) {

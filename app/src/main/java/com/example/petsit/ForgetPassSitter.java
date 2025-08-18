@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,11 @@ public class ForgetPassSitter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forget_password_sitter);
+
+        ImageView back = findViewById(R.id.img_vector1);
+        back.setOnClickListener(view -> {
+            finish();
+        });
 
         requestQueue = Volley.newRequestQueue(this);
         initializeViews();
@@ -73,6 +79,11 @@ public class ForgetPassSitter extends AppCompatActivity {
                         if (success) {
                             // Switch to pin verification layout
                             setContentView(R.layout.forget_password_pin_sitter);
+                            ImageView imageVector = findViewById(R.id.img_vector1);
+
+                            imageVector.setOnClickListener(view -> {
+                                finish();
+                            });
                             initializePinViews();
                         }
                     } catch (JSONException e) {
@@ -116,6 +127,11 @@ public class ForgetPassSitter extends AppCompatActivity {
                             resetToken = response.getString("token");
                             // Switch to password reset layout
                             setContentView(R.layout.forget_password_reset_sitter);
+                            ImageView imageVector = findViewById(R.id.img_vector1);
+
+                            imageVector.setOnClickListener(view -> {
+                                finish();
+                            });
                             initializeResetViews();
                         } else {
                             String message = response.getString("message");

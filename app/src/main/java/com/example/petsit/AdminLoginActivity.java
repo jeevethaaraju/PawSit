@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import org.json.JSONException;
@@ -32,6 +33,12 @@ public class AdminLoginActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.edit_email);
         etPassword = findViewById(R.id.edit_password);
         btnLogin = findViewById(R.id.btn_login);
+
+        ImageView imageVector = findViewById(R.id.img_vector1);
+
+        imageVector.setOnClickListener(view -> {
+            finish();
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

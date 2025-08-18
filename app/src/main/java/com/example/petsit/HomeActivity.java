@@ -81,7 +81,7 @@ public class HomeActivity extends AppCompatActivity {
             int ownerId = preferences.getInt(KEY_OWNER_ID, -1);
             Intent intent = new Intent(this, ReportActivity.class);
             intent.putExtra("petOwner_ID", ownerId);
-            Toast.makeText(this, "Retrieved owner ID: " + ownerId, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Retrieved owner ID: " + ownerId, Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });
 

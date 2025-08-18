@@ -244,7 +244,7 @@ public class ViewPaymentActivity extends AppCompatActivity {
         intent.putExtra("selectedOption", selectedOption);
         intent.putExtra("price", servicePrice);
         intent.putExtra("service_name", serviceName);
-        Toast.makeText(this, "Retrieved pet ID: " + selectedPetIds, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Retrieved pet ID: " + selectedPetIds, Toast.LENGTH_SHORT).show();
         intent.putIntegerArrayListExtra("selected_pet_ids", selectedPetIds);
         intent.putStringArrayListExtra("selected_pet_names", selectedPetNames);
         intent.putStringArrayListExtra("selected_pet_types", selectedPetTypes);

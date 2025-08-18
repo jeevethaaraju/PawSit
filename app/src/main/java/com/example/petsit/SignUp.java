@@ -206,20 +206,24 @@ public class SignUp extends AppCompatActivity {
 
         roleRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == R.id.radioOwner) {
-                selectedRole = "petowner";
+                selectedRole = "petowner";  // Make sure this matches your backend expectation
                 // Disable bank details for pet owners
                 accbox.setVisibility(View.GONE);
                 bankDetailsLayout.setVisibility(View.GONE);
                 accountNumber.setVisibility(View.GONE);
                 bankSpinner.setSelection(0); // Reset selection
             } else if (checkedId == R.id.radioSitter) {
-                selectedRole = "petsitter";
+                selectedRole = "petsitter";  // Make sure this matches your backend expectation
                 // Enable bank details for pet sitters
                 accbox.setVisibility(View.VISIBLE);
                 bankDetailsLayout.setVisibility(View.VISIBLE);
                 accountNumber.setVisibility(View.VISIBLE);
             }
         });
+
+        // Initialize with default selection
+        roleRadioGroup.check(R.id.radioOwner); // Auto-select pet owner by default
+        selectedRole = "petowner"; // Initialize the variable
 
         btnUploadPhoto.setOnClickListener(v -> openImageChooser());
         btnSignUp.setOnClickListener(v -> attemptRegistration());
@@ -340,6 +344,7 @@ public class SignUp extends AppCompatActivity {
                                         String accountNumber, String role, Double lat, Double lng) {
         showToast("Uploading image...");
 
+
         new Thread(() -> {
             try {
                 String lineEnd = "\r\n";
@@ -417,8 +422,8 @@ public class SignUp extends AppCompatActivity {
                     runOnUiThread(() -> {
                         if (success) {
                             sendDataToServer(firstName, lastName, email, password,
-                                    birthDate, phoneNumber, location, gender, role,
-                                    imageUrl,accountNumber,bank, lat, lng);
+                                    birthDate, phoneNumber, location, gender, bank,
+                                    accountNumber, role, imageUrl, lat, lng);
                         } else {
                             showToast("Image upload failed: " + message);
                         }

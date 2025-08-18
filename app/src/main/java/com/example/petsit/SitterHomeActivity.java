@@ -69,7 +69,7 @@ public class SitterHomeActivity extends AppCompatActivity {
             SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
             int petsitterId = preferences.getInt(KEY_SITTER_ID, -1);
             String sessionToken = preferences.getString(KEY_SESSION_TOKEN, null);
-            Toast.makeText(this, "Retrieved owner ID: " + petsitterId, Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "Retrieved owner ID: " + petsitterId, Toast.LENGTH_SHORT).show();
         });
 
         findViewById(R.id.notification).setOnClickListener(v -> {
@@ -77,7 +77,7 @@ public class SitterHomeActivity extends AppCompatActivity {
             int sitterId = preferences.getInt(KEY_SITTER_ID, -1);
             Intent intent = new Intent(this, NotificationsActivity.class);
             intent.putExtra("petSitter_ID", sitterId);
-            Toast.makeText(this, "Retrieved sitter ID: " + sitterId, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Retrieved sitter ID: " + sitterId, Toast.LENGTH_SHORT).show();
             startActivity(intent);
         });
 
